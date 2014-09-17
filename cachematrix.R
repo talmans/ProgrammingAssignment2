@@ -1,7 +1,8 @@
 
 # Stoner CacheMatrix script: 09-17
 ##
-## functions do
+## functions:
+##
 ##    makeCacheMatrix()
 ##      This returns a matrix object with 4 methods
 ##      Set: Saves the matrix in the global  x and sets its inverse im, global free variable, to null
@@ -10,14 +11,8 @@
 ##           called by CacheSolve after creating the inverse matrix
 ##      getinverse: Returns the inverse matrix from the global im
 ##
-##    CacheSolve()
-##      Inputs:
-##        Takes a cachematrix object:  
-##      Purpose: 
-##        Returns its inverse from the global im cache
-##        If the im cache is empty then the inverse is computed and saved in the cache 
-##      
-## 
+##   CacheSolve()
+##      Returns the inverse of a matrix.  Details below:
 
 makeCacheMatrix <- function(x = matrix()) {
   im <- NULL
@@ -34,7 +29,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+##    CacheSolve()
+##      Inputs:
+##        Takes a cachematrix object:  
+##      Purpose: 
+##        Returns its inverse from the global im cache
+##        If the im cache is empty then the inverse is computed and saved in the cache 
+##      
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
